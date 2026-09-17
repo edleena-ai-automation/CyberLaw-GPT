@@ -76,7 +76,7 @@ def setup_rag_pipeline(pdf_path):
 def get_answer(query, vectorstore, api_key, tech_level, length_pref):
     """Retrieves context and generates response via Groq."""
     try:
-        llm = ChatGroq(api_key=api_key, model_name="llama-3.3-70b-versatile")
+        llm = ChatGroq(api_key=api_key, model_name="openai/gpt-oss-20b")
         
         system_prompt = f"""You are an AI expert specializing in Pakistan Cyber Laws (PECA).
         Answer the user's question based ONLY on the provided context.
